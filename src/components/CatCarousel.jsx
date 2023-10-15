@@ -48,7 +48,7 @@ const CatCarousel = () => {
             <label class="form-check-label" for="inlineCheckbox1">Dogs</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"/>
+            <input class="form-check-input my-custom-checkbox" type="checkbox" id="inlineCheckbox2" value="option2"/>
             <label class="form-check-label" for="inlineCheckbox2">Cats</label>
           </div>
         </div>

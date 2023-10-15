@@ -22,7 +22,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1rem;
     padding-top: 0;
-    width: 70%;
+    width: 50%;
 }
 .menuTittle{
 
@@ -33,7 +33,7 @@
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
-    width: 50%;
+    width: 30%;
 
 }
 
@@ -64,20 +64,23 @@
 .servicesMenuHead div input{
     border: 2px solid rgba(0, 0, 0, 0.2);
 }
-.my-custom-checkbox:checked {
-    background-color: #4caf50 !important; /* Cambia el color de fondo cuando está marcado */
-    border: 2px solid #4caf50 !important; /* Cambia el color del borde cuando está marcado */
-    color: #fff !important; /* Cambia el color del texto cuando está marcado */
-    box-shadow: 0 0 5px #4caf50 !important;
 
+.my-custom-checkbox:hover:checked{
+    background-color: rgba(0, 0, 0, 0.8) !important;
 }
-.my-custom-checkbox:active,
+
 .my-custom-checkbox:focus,
 .my-custom-checkbox:hover{
-    box-shadow: 0 0 10px #4caf50 !important;
-    border-color: black !important;
     
+    border-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7) !important;
 }
+.my-custom-checkbox:checked {
+    background-color: #00000080 !important;
+    border: 2px solid #00000080 !important;
+
+}
+
 
 .servicesMenuBody p{
     margin: 0;
