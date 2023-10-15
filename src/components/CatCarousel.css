@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'BogartBold';
+    src: local('BogartBold'), url('../assets/fonts/BOGARTBOLDTRIAL.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'BogartRegular';
+    src: local('BogartRegular'), url('../assets/fonts/BOGARTREGULARTRIAL.TTF') format('truetype');
+}
+
+.carouselContainer{
+    position: absolute;
+    padding: 0;
+    width: 100%
+}
+
+.servicesMenuContainer{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    padding-top: 0;
+    width: 70%;
+}
+.menuTittle{
+
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+    width: 50%;
+
+}
+
+.menuTittle h1{
+    color: white;
+    font-family: 'BogartBold', sans-serif;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.menuTittle h2{
+    color: white;
+    font-family: 'BogartRegular', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    
+}
+.servicesMenuHead{
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.servicesMenuHead label{
+    padding-right: 1rem;
+
+}
+.servicesMenuHead div input{
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.my-custom-checkbox:checked {
+    background-color: #4caf50 !important; /* Cambia el color de fondo cuando está marcado */
+    border: 2px solid #4caf50 !important; /* Cambia el color del borde cuando está marcado */
+    color: #fff !important; /* Cambia el color del texto cuando está marcado */
+    box-shadow: 0 0 5px #4caf50 !important;
+
+}
+.my-custom-checkbox:active,
+.my-custom-checkbox:focus,
+.my-custom-checkbox:hover{
+    box-shadow: 0 0 10px #4caf50 !important;
+    border-color: black !important;
+    
+}
+
+.servicesMenuBody p{
+    margin: 0;
+    background-color: white;
+
+    
+}
