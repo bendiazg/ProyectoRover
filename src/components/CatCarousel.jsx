@@ -43,13 +43,13 @@ const CatCarousel = () => {
       <div className='servicesMenuContainer'>
         <div className='servicesMenuHead'>
           <label>I'm looking for service for my:</label>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input my-custom-checkbox" type="checkbox"/>
-            <label class="form-check-label" for="inlineCheckbox1">Dogs</label>
+          <div className="form-check form-check-inline">
+            <input className="form-check-input my-custom-checkbox" type="checkbox"/>
+            <label className="form-check-label" for="inlineCheckbox1">Dogs</label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input my-custom-checkbox" type="checkbox" id="inlineCheckbox2" value="option2"/>
-            <label class="form-check-label" for="inlineCheckbox2">Cats</label>
+          <div className="form-check form-check-inline">
+            <input className="form-check-input my-custom-checkbox" type="checkbox" id="inlineCheckbox2" value="option2"/>
+            <label className="form-check-label" for="inlineCheckbox2">Cats</label>
           </div>
         </div>
         <div className='servicesMenuBody'>

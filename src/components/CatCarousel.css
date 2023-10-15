@@ -15,7 +15,6 @@
 
 .servicesMenuContainer{
     position: absolute;
-    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -34,7 +33,6 @@
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
     width: 30%;
-
 }
 
 .menuTittle h1{
@@ -87,4 +85,13 @@
     background-color: white;
 
     
+}
+
+@media (max-width: 1460px) {
+    .menuTittle {
+        width: 50%;
+    }
+    .servicesMenuContainer{
+        width: 70%;
+    }
 }
