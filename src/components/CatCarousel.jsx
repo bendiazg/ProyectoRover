@@ -4,6 +4,12 @@ import "./CatCarousel.css"
 import gato1 from '../assets/images/gato1.jpg';
 import gato2 from '../assets/images/gato2.jpg';
 import gato3 from '../assets/images/gato3.jpg';
+import trainingIcon from '../assets/images/trainingIcon.svg';
+import boardingIcon from '../assets/images/boardingIcon.svg';
+import sittingIcon from '../assets/images/sittingIcon.svg';
+import visitIcon from '../assets/images/visitIcon.svg';
+import careIcon from '../assets/images/careIcon.svg';
+import walkingIcon from '../assets/images/walkingIcon.svg';
 
 
 
@@ -42,7 +48,7 @@ const CatCarousel = () => {
       </div>
       <div className='servicesMenuContainer'>
         <div className='servicesMenuHead'>
-          <label>I'm looking for service for my:</label>
+          <h6>I'm looking for service for my:</h6>
           <div className="form-check form-check-inline">
             <input className="form-check-input my-custom-checkbox" type="checkbox"/>
             <label className="form-check-label" for="inlineCheckbox1">Dogs</label>
@@ -53,14 +59,63 @@ const CatCarousel = () => {
           </div>
         </div>
         <div className='servicesMenuBody'>
-          <p>Texto flotante</p>
+          <div>
+            <div className='hContainer'>
+              <div className='hContainerTittle1'>
+                <h6>For When You're Away</h6>
+              </div>
+              <div className='hContainerTittle2'>
+                <h6>For When You're At Work</h6>
+              </div>
+            </div>
+            <div className='serviceContainer'>
+              <div className='serviceCardContainer'>
+                <div className='serviceCard'>
+                  <img src={boardingIcon} alt="" />
+                  <div>Boarding</div>
+                </div>
+              </div>
+              <div className='serviceCardContainer'>
+                <div className='serviceCard'>
+                  <img src={sittingIcon} alt="" />
+                  <div>House Sitting</div>
+                </div>
+              </div>
+              <div className='serviceCardContainer'>
+                <div className='serviceCard'>
+                  <img src={visitIcon} alt="" />
+                  <div>Drop-In Visits</div>
+                </div>
+              </div>
+              <div className='serviceCardContainer'>
+                <div className='serviceCard'>
+                  <img src={careIcon} alt="" />
+                  <div>Doggy Day Care</div>
+                </div>
+              </div>
+              <div className='serviceCardContainer'>
+                <div className='serviceCard'>
+                  <img src={walkingIcon} alt="" />
+                  <div>Dog Walking</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>  
         <div className='servicesMenuFooter'>  
-          <p>Footer</p>
+          <div>
+            <img src={trainingIcon} alt="" />
+          </div>
+          <div className='trainingCard'>
+            <h6>Dog training</h6>
+            <p>1-1 virtual dog training through GoodPup, the newest member of the Rover family.</p>
+          </div>
+          <a className='linkCard' href="https://www.rover.com/dog-training/" target="_blank" rel="noreferrer">Start a free trial</a>
         </div>
       </div>
     </div>
 
   );
 };
+
 export default CatCarousel;

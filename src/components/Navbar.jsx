@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {Link, NavLink} from "react-router-dom";
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/logo.svg';
+import questionMark from '../assets/images/questionMark.svg';
+import signUpIcon from '../assets/images/signUpIcon.svg';
 import "./Navbar.css"
 import { Collapse } from 'react-bootstrap';
 
@@ -58,13 +60,19 @@ export const Navbar = () => {
         </ul>
         <ul className='section2'>
             <li>
-                <NavLink>Sign Up</NavLink>
+                <NavLink>
+                    <img src={signUpIcon} alt="" />
+                    Sign Up
+                </NavLink>
             </li>
             <li>
                 <NavLink>Sign In</NavLink>
             </li>
             <li>
-                <NavLink>Help</NavLink>
+                <NavLink>
+                    <img src={questionMark} alt="" />
+                    Help
+                </NavLink>
             </li>
         </ul>
     </nav>

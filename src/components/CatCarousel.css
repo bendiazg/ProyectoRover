@@ -34,6 +34,22 @@
     padding: 0;
     width: 30%;
 }
+.servicesMenuFooter{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.servicesMenuFooter .linkCard{
+    flex: 1 1 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.servicesMenuFooter div{
+    padding-left: 1rem;
+}
 
 .menuTittle h1{
     color: white;
@@ -50,17 +66,19 @@
     
 }
 .servicesMenuHead{
+    display: flex;
     text-align: left;
-    justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgb(235, 232, 228);
+    padding:  0.5rem;
 }
-.servicesMenuHead label{
+.servicesMenuHead h6{
     padding-right: 1rem;
 
 }
 .servicesMenuHead div input{
     border: 2px solid rgba(0, 0, 0, 0.2);
+    transform: scale(1.5);
 }
 
 .my-custom-checkbox:hover:checked{
@@ -79,12 +97,51 @@
 
 }
 
-
 .servicesMenuBody p{
     margin: 0;
     background-color: white;
 
-    
+}
+
+.hContainer{
+    background-color: white;
+    display: flex;
+    padding: 0.3rem;
+
+}
+
+.hContainer .hContainerTittle1{
+    flex: auto;
+}
+
+.hContainer .hContainerTittle2{
+    width: 40%;
+}
+
+.serviceContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.serviceCardContainer{
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px 2px inset;
+    flex: 1 1 0%;
+    justify-content: center;
+    max-width: calc(20% - 7px);
+}
+
+.serviceCard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.serviceCard img{
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 @media (max-width: 1460px) {

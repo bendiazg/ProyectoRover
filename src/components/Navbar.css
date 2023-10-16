@@ -65,3 +65,11 @@ nav .section2{
     margin-right: 0.5rem;
 }
 
+.section2 li{
+    display: flex;
+}
+
+.section2 li img{
+    padding-right: 0.2rem;
+}
+
