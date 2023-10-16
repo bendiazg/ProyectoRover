@@ -143,6 +143,30 @@
     align-items: center;
 }
 
+.serviceCard svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.serviceCard div{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.serviceCardContainer:hover,
+.serviceCardContainer.clicked{
+    box-shadow: black 0px 0px 0px 2px;
+
+    .serviceCard svg{
+        fill: black;
+    }
+    .serviceCard div{
+        color: black;
+    }
+}
+
+
+
 
 @media (max-width: 1460px) {
     .menuTittle {
