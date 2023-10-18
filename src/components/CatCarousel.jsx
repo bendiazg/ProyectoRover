@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import DatePicker from 'react-datepicker';
 import { Carousel } from 'react-bootstrap';
+import 'react-datepicker/dist/react-datepicker.css';
 import "./CatCarousel.css"
 import gato1 from '../assets/images/gato1.jpg';
 import gato2 from '../assets/images/gato2.jpg';
@@ -14,9 +16,16 @@ const CatCarousel = () => {
   const images = useMemo(() => [gato1, gato2, gato3], []);  // Lista de imagenes de carrusel
 
   const [selectedService, setSelectedService] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
+
 
   const handleServiceClick = (index) => {
     setSelectedService(index);
+  };
+
+  const handleSizeClick = (index) => {
+    setSelectedSize(index);
   };
 
   const handleSelect = (selectedIndex) => {
@@ -113,6 +122,86 @@ const CatCarousel = () => {
                   <path d="M1.8 15.4a4 4 0 0 1 .8-5.6l4.6-3.45a3 3 0 0 1 3.6 0l4.6 3.45a4 4 0 1 1-4.8 6.4c-.64-.48-1.177-.7-1.6-.7-.423 0-.96.22-1.6.7a4 4 0 0 1-5.6-.8zM9 13.5c.91 0 1.84.38 2.8 1.1a2 2 0 1 0 2.4-3.2L9.6 7.95a1 1 0 0 0-1.2 0L3.8 11.4a2 2 0 1 0 2.4 3.2c.96-.72 1.89-1.1 2.8-1.1zM1.5 8C.672 8 0 7.105 0 6s.672-2 1.5-2S3 4.895 3 6s-.672 2-1.5 2zM6 5C4.895 5 4 3.88 4 2.5S4.895 0 6 0s2 1.12 2 2.5S7.105 5 6 5zm6 0c-1.105 0-2-1.12-2-2.5S10.895 0 12 0s2 1.12 2 2.5S13.105 5 12 5zm4.5 3c-.828 0-1.5-.895-1.5-2s.672-2 1.5-2 1.5.895 1.5 2-.672 2-1.5 2zm-.7 22.4a4 4 0 0 1 .8-5.6l4.6-3.45a3 3 0 0 1 3.6 0l4.6 3.45a4 4 0 1 1-4.8 6.4c-.64-.48-1.177-.7-1.6-.7-.423 0-.96.22-1.6.7a4 4 0 0 1-5.6-.8zm4.4-.8c.96-.72 1.89-1.1 2.8-1.1.91 0 1.84.38 2.8 1.1a2 2 0 1 0 2.4-3.2l-4.6-3.45a1 1 0 0 0-1.2 0l-4.6 3.45a2 2 0 1 0 2.4 3.2zM15.5 23c-.828 0-1.5-.895-1.5-2s.672-2 1.5-2 1.5.895 1.5 2-.672 2-1.5 2zm4.5-3c-1.105 0-2-1.12-2-2.5s.895-2.5 2-2.5 2 1.12 2 2.5-.895 2.5-2 2.5zm6 0c-1.105 0-2-1.12-2-2.5s.895-2.5 2-2.5 2 1.12 2 2.5-.895 2.5-2 2.5zm4.5 3c-.828 0-1.5-.895-1.5-2s.672-2 1.5-2 1.5.895 1.5 2-.672 2-1.5 2z"></path>
                 </svg>
                   <div>Dog Walking</div>
+                </div>
+              </div>
+            </div>
+            <div >
+              <div className='hContainer marginTop'>
+                <div className='hContainerTittle1'>
+                  <h6>Boarding near</h6>
+                </div>
+                <div className='hContainerTittle3'>
+                  <h6>For these days</h6>
+                </div>
+              </div>
+              <div className='inputContainer'>
+                <div className='addressContainer'>
+                  <input type="text" placeholder='Zip code or address' />
+                </div>
+                <div className='dateContainer'>
+                  <div className='dropContainer'>
+                    <DatePicker
+                      className='dateInput'
+                      showIcon
+                      icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1B1F23" viewBox="0 0 32 32" class="DatePicker__StyledIcon-c3dx7l-0 ivxhfA"><path d="M8 0a1 1 0 0 1 1 1v5H7V1a1 1 0 0 1 1-1zm16 0a1 1 0 0 1 1 1v5h-2V1a1 1 0 0 1 1-1zM2 12v17a1 1 0 0 0 1 1h26a1 1 0 0 0 1-1V12H2zm23-2v2h5V5a1 1 0 0 0-1-1h-2V2h2a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h2v2H3a1 1 0 0 0-1 1v5h23zm-4-8v2H11V2h10z"></path></svg>}
+                      isClearable 
+                      dateFormat="dd/MM/yyyy" 
+                      placeholderText="Drop off" 
+                      selected={selectedDate} 
+                      onChange={(date) => setSelectedDate(date)}
+                    />
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" viewBox="0 0 25 25"><path d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                  <div className='pickContainer'>
+                    <DatePicker 
+                      className='dateInput'
+                      showIcon
+                      icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1B1F23" viewBox="0 0 32 32" class="DatePicker__StyledIcon-c3dx7l-0 ivxhfA"><path d="M8 0a1 1 0 0 1 1 1v5H7V1a1 1 0 0 1 1-1zm16 0a1 1 0 0 1 1 1v5h-2V1a1 1 0 0 1 1-1zM2 12v17a1 1 0 0 0 1 1h26a1 1 0 0 0 1-1V12H2zm23-2v2h5V5a1 1 0 0 0-1-1h-2V2h2a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h2v2H3a1 1 0 0 0-1 1v5h23zm-4-8v2H11V2h10z"></path></svg>}
+                      isClearable 
+                      dateFormat="dd/MM/yyyy" 
+                      placeholderText="Pick up" 
+                      selected={selectedDate} 
+                      onChange={(date) => setSelectedDate(date)} 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className='hContainer'>
+                <h6>My Dog size</h6>
+              </div>
+              <div className='sizeContainer'>
+                <div className={`sizeCardContainer ${selectedSize === 1 ? 'clicked' : ''}`}
+                onClick={() => handleSizeClick(1)}>
+                  <div className='sizeCard'>
+                    <div>Small</div> 
+                    <div>0 - 15 lbs</div>
+                  </div>
+                </div>
+                <div className={`sizeCardContainer ${selectedSize === 2 ? 'clicked' : ''}`}
+                onClick={() => handleSizeClick(2)}>
+                  <div className='sizeCard'>
+                    <div>Medium</div> 
+                    <div>16 - 40 lbs</div>
+                  </div>
+                </div>
+                <div className={`sizeCardContainer ${selectedSize === 3 ? 'clicked' : ''}`}
+                onClick={() => handleSizeClick(3)}>
+                  <div className='sizeCard'>
+                    <div>Large</div> 
+                    <div>41 - 100 lbs</div>
+                  </div>
+                </div>
+                <div className={`sizeCardContainer ${selectedSize === 4 ? 'clicked' : ''}`}
+                onClick={() => handleSizeClick(4)}>
+                  <div className='sizeCard'>
+                    <div>Giant</div> 
+                    <div>101+ lbs</div>
+                  </div>
+                </div>
+                <div className='buttonContainer'>
+                  <button className='searchButton'>Search</button>
                 </div>
               </div>
             </div>
