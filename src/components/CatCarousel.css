@@ -10,37 +10,41 @@
 .carouselContainer{
     position: absolute;
     padding: 0;
-    width: 100%
+    
 }
+
+.custom-carousel-image {
+    height: 850px; /* Ajusta la altura deseada para las imágenes del carrusel */
+    object-fit: cover; /* Esto asegura que las imágenes se ajusten al contenedor sin distorsión */
+  }
 
 .servicesMenuContainer{
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(235, 232, 228);
     padding: 1rem;
     padding-top: 0;
     width: 50%;
-    min-width: max-content;
+    min-width: fit-content;
     
 }
 .menuTittle{
-
     position: absolute;
     text-align: center;
-    top: 25%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
     width: 30%;
+    min-width: initial;
 }
 .servicesMenuFooter{
     background-color: white;
     display: flex;
     align-items: center;
-    margin-top: 3rem;
 }
 
 .servicesMenuFooter .linkCard{
@@ -100,6 +104,7 @@
 }
 .servicesMenuBody{
     background-color: white;
+    padding: 0.5;
 }
 
 .servicesMenuBody p{
@@ -114,7 +119,7 @@
     padding: 0.3rem;   
 }
 .marginTop{
-    margin-top: 8px;
+    margin-top: 2px;
 }
 
 
@@ -134,6 +139,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+.sizeContainer{
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+
 }
 
 .serviceCardContainer,
@@ -179,6 +192,8 @@
 .inputContainer{
     display: flex;
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     
 }
 
@@ -190,6 +205,7 @@
     height: 40px;
     width: 250px;
     text-align: center;
+    
 
 }
 

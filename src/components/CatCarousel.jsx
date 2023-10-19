@@ -17,7 +17,7 @@ const CatCarousel = () => {
 
   const [selectedService, setSelectedService] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(new Set());
 
 
   const handleServiceClick = (index) => {
@@ -25,8 +25,18 @@ const CatCarousel = () => {
   };
 
   const handleSizeClick = (index) => {
-    setSelectedSize(index);
+    const newSelectedSize = new Set(selectedSize);
+
+    if (newSelectedSize.has(index)) {
+      newSelectedSize.delete(index);
+    } else {
+      newSelectedSize.add(index);
+    }
+
+    setSelectedSize(newSelectedSize);
   };
+
+  const isSizeSelected = (index) => selectedSize.has(index);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
@@ -48,7 +58,7 @@ const CatCarousel = () => {
       <Carousel className='Carousel' indicators={false} controls={false} activeIndex={index} onSelect={handleSelect}>
         {images.map((image, i) => (
           <Carousel.Item key={i}>
-            <img className="d-block w-100" src={image} alt={`Imagen ${i + 1}`} />
+            <img className="custom-carousel-image d-block w-100" src={image} alt={`Imagen ${i + 1}`} />
           </Carousel.Item>
         ))}
       </Carousel>
@@ -172,28 +182,28 @@ const CatCarousel = () => {
                 <h6>My Dog size</h6>
               </div>
               <div className='sizeContainer'>
-                <div className={`sizeCardContainer ${selectedSize === 1 ? 'clicked' : ''}`}
+                <div className={`sizeCardContainer ${isSizeSelected(1) ? 'clicked' : ''}`}
                 onClick={() => handleSizeClick(1)}>
                   <div className='sizeCard'>
                     <div>Small</div> 
                     <div>0 - 15 lbs</div>
                   </div>
                 </div>
-                <div className={`sizeCardContainer ${selectedSize === 2 ? 'clicked' : ''}`}
+                <div className={`sizeCardContainer ${isSizeSelected(2) ? 'clicked' : ''}`}
                 onClick={() => handleSizeClick(2)}>
                   <div className='sizeCard'>
                     <div>Medium</div> 
                     <div>16 - 40 lbs</div>
                   </div>
                 </div>
-                <div className={`sizeCardContainer ${selectedSize === 3 ? 'clicked' : ''}`}
+                <div className={`sizeCardContainer ${isSizeSelected(3) ? 'clicked' : ''}`}
                 onClick={() => handleSizeClick(3)}>
                   <div className='sizeCard'>
                     <div>Large</div> 
                     <div>41 - 100 lbs</div>
                   </div>
                 </div>
-                <div className={`sizeCardContainer ${selectedSize === 4 ? 'clicked' : ''}`}
+                <div className={`sizeCardContainer ${isSizeSelected(4) ? 'clicked' : ''}`}
                 onClick={() => handleSizeClick(4)}>
                   <div className='sizeCard'>
                     <div>Giant</div> 
